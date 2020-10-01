@@ -12,6 +12,7 @@ export class CalculatorButtonsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   add=(a,b)=>document.querySelector("#result").innerHTML=(parseInt(a)+parseInt(b)).toString();
   sub=(a,b)=>document.querySelector("#result").innerHTML=(parseInt(a)-parseInt(b)).toString();
   mul=(a,b)=>document.querySelector("#result").innerHTML=(parseInt(a)*parseInt(b)).toString();
