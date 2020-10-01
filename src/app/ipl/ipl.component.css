@@ -1,0 +1,21 @@
+td,th{
+    border: 1px solid black;
+}
+th{
+    color:white;
+}
+.rcb{
+    background-color:red;
+}
+.csk{
+    background-color: rgba(184, 184, 21, 0.89);
+}
+.hyd{
+    background-color: orange;
+}
+.kkr{
+    background-color: purple;
+}
+h1{
+    color:blue;
+}

@@ -1,0 +1,32 @@
+<div class="container" id="container">
+
+    <div>
+        <div class="input-group input-group-lg mb-2 px-5 pt-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Number 1</span>
+            </div>
+            <input type="number" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" id="number1" #num1>
+        </div>
+        <div class="input-group input-group-lg mb-2 px-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Number 2</span>
+            </div>
+            <input type="number" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" id="number2" #num2>
+        </div>
+    </div>
+    <div class="px-5">
+        <h3>Result:</h3>
+        <h4 id="result"></h4>
+    </div>
+
+
+
+    <div class="px-5 pb-5">
+        <button type="button" class="btn btn-success mr-2" (click)="add(num1.value,num2.value)">Add</button>
+        <button type="button" class="btn btn-success mr-2" (click)="sub(num1.value,num2.value)">Subtract</button>
+        <button type="button" class="btn btn-success mr-2" (click)="mul(num1.value,num2.value)">Multiply</button>
+        <button type="button" class="btn btn-success mr-2" (click)="div(num1.value,num2.value)">Divide</button>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+export var add=()=> 5+4;
