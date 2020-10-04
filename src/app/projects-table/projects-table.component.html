@@ -33,4 +33,4 @@
   </tr>
   
 </table>
-<button type="button" class="btn btn-success" (click)="deleteRecords()">Delete</button>
+<employee-details [parentData]="tableData" (sendData)="receiveData($event)" class="d-flex justify-content-end"></employee-details>

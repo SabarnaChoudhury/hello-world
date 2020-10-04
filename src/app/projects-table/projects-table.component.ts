@@ -93,7 +93,9 @@ export class ProjectsTableComponent implements OnInit {
   ngOnInit(){
   }
 
-  deleteRecords(){
-    this.tableData=this.tableData.filter(item=>item.checked==false)
+  receiveData(data){
+    console.log(data);
+    this.tableData=data;
   }
+  
 }
