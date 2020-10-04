@@ -15,7 +15,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 4,
       "projectProgress": 67,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     },
     {
       "serialNumber": "2",
@@ -23,7 +23,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 2,
       "projectProgress": 47,
       "Status": "Success",
-      "Edit": "None"
+      "checked":true
     },
     {
       "serialNumber": "3",
@@ -31,7 +31,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 3,
       "projectProgress": 77,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     },
     {
       "serialNumber": "4",
@@ -39,7 +39,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 4,
       "projectProgress": 60,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     },
     {
       "serialNumber": "5",
@@ -47,7 +47,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 3,
       "projectProgress": 12,
       "Status": "Success",
-      "Edit": "None"
+      "checked":true
     },
     {
       "serialNumber": "6",
@@ -55,7 +55,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 4,
       "projectProgress": 35,
       "Status": "Success",
-      "Edit": "None"
+      "checked":true
     },
     {
       "serialNumber": "7",
@@ -63,7 +63,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 2,
       "projectProgress": 97,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     },
     {
       "serialNumber": "8",
@@ -71,7 +71,7 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 3,
       "projectProgress": 77,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     },
     {
       "serialNumber": "9",
@@ -79,18 +79,21 @@ export class ProjectsTableComponent implements OnInit {
       "teamMembers": 4,
       "projectProgress": 77,
       "Status": "Success",
-      "Edit": "None"
+      "checked":false
     }
   ];
   constructor() { }
-  Name="sabarna";
-  delete=(id)=>document.getElementById(id).remove()
+  // Name="sabarna";
+  // delete=(id)=>document.getElementById(id).remove()
   // edit=(id)=>document.getElementById("name"+id).innerHTML=`<input type="text" id=${'text'+id}>`
   // save=(id)=>document.getElementById("name"+id).innerHTML=((document.getElementById("text"+id) as HTMLInputElement).value);
-  edit=(id)=>document.getElementById("name"+id).innerHTML=`<input type="text" id=${'text'+id} [(ngModel)]="tableData[${(parseInt(id)-1)}].projectName" (change)="save()"/>`
-  save=()=>alert("hi")
+  // edit=(id)=>document.getElementById("name"+id).innerHTML=`<input type="text" id=${'text'+id} [(ngModel)]="tableData[${(parseInt(id)-1)}].projectName" (change)="save()"/>`
+  // save=()=>alert("hi")
 
   ngOnInit(){
   }
 
+  deleteRecords(){
+    this.tableData=this.tableData.filter(item=>item.checked==false)
+  }
 }
