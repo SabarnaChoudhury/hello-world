@@ -1,0 +1,12 @@
+<div>
+    <label for="projectName">Enter Project Name:</label>
+<input type="text" class="form-control" id="projectName" name="projectName" [(ngModel)]="newData.projectName">
+<label for="teamMember">Enter no. of Team Members:</label>
+<input type="number" class="form-control" id="teamMember" name="teamMember" [(ngModel)]="newData.teamMembers">
+<label for="projectProgress">Enter Project Progress:</label>
+<input type="number" class="form-control" id="projectProgress" name="projectProgress" [(ngModel)]="newData.projectProgress">
+<br>
+<button class="btn btn-success d-flex justify-content-end" (click)="insert()">Insert</button>
+</div>
+
+

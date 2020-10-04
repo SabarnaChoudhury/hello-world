@@ -14,6 +14,7 @@ import { IplComponent } from './ipl/ipl.component';
 import { ProjectsTableComponent } from './projects-table/projects-table.component';
 import { TableHeaderComponent } from './projects-table/table-header/table-header.component';
 import { FormsModule } from '@angular/forms';
+import { NewEmployeeComponent } from './projects-table/new-employee/new-employee.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     ProjectsTableComponent,
     ProjectsNavbarComponent,
     TableHeaderComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    NewEmployeeComponent
   ],
   imports: [
     BrowserModule,

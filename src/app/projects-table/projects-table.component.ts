@@ -97,5 +97,11 @@ export class ProjectsTableComponent implements OnInit {
     console.log(data);
     this.tableData=data;
   }
+
+  receiveNewData(data){
+    
+  
+    console.log(data);
+  }
   
 }
