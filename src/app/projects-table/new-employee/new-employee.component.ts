@@ -13,22 +13,32 @@ export class NewEmployeeComponent{
   
   
  
-  newData={
-    "serialNumber": "",
-    "projectName": "",
-    "teamMembers": "",
-    "projectProgress": "",
-    "Status":"",
-    "checked": true
-  }
+  // newData={
+  //   "serialNumber": "",
+  //   "projectName": "",
+  //   "teamMembers": "",
+  //   "projectProgress": "",
+  //   "Status":"",
+  //   "checked": true
+  // }
 
-  insert(){
+  insert(a:HTMLInputElement,b:HTMLInputElement,c:HTMLInputElement){
     // console.log(this.newData);
-    this.newData.serialNumber=(this.parentData.length+1).toString();
-    this.newData.Status="Success";
-    this.newData.checked=true;
+    // this.newData.serialNumber=(this.parentData.length+1).toString();
+    // this.newData.Status="Success";
+    // this.newData.checked=true;
    
-    this.parentData[this.parentData.length]=this.newData;
+    // this.parentData[this.parentData.length]=this.newData;
+   
+
+    this.parentData.push({
+      projectName:a.value,
+      teamMembers:b.value,
+      projectProgress:c.value,
+      serialNumber:(this.parentData.length+1).toString(),
+      Status:"Success",
+      checked:true
+    })
     this.sendNewData.emit(this.parentData);
   }
 
