@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects-table.component.css']
 })
 export class ProjectsTableComponent implements OnInit {
-  header=["#","projectName","teamMembers","projectProgress","Status","Edit"];
-  counter=0;
   tableData=[
     {
       "serialNumber": "1",
@@ -83,13 +81,6 @@ export class ProjectsTableComponent implements OnInit {
     }
   ];
   constructor() { }
-  // Name="sabarna";
-  // delete=(id)=>document.getElementById(id).remove()
-  // edit=(id)=>document.getElementById("name"+id).innerHTML=`<input type="text" id=${'text'+id}>`
-  // save=(id)=>document.getElementById("name"+id).innerHTML=((document.getElementById("text"+id) as HTMLInputElement).value);
-  // edit=(id)=>document.getElementById("name"+id).innerHTML=`<input type="text" id=${'text'+id} [(ngModel)]="tableData[${(parseInt(id)-1)}].projectName" (change)="save()"/>`
-  // save=()=>alert("hi")
-
   ngOnInit(){
   }
 
