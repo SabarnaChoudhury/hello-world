@@ -1,10 +1,14 @@
-<div>
+<form #form_element="ngForm">
     <label for="projectName">Enter Project Name:</label>
-    <input type="text" class="form-control" id="projectName" name="projectName" #projectName>
+    <input type="text" class="form-control" id="projectName" name="projectName" ngModel #projectName>
     <label for="teamMember">Enter no. of Team Members:</label>
-    <input type="number" class="form-control" id="teamMember" name="teamMember" #teamMembers>
+    <input type="number" class="form-control" id="teamMember" name="teamMember" ngModel #teamMembers>
     <label for="projectProgress">Enter Project Progress:</label>
-    <input type="number" class="form-control" id="projectProgress" name="projectProgress" #projectProgress>
+    <input type="number" class="form-control" id="projectProgress" name="projectProgress" ngModel #projectProgress>
     <br>
-    <button class="btn btn-success d-flex justify-content-end" (click)="insert(projectName,teamMembers,projectProgress)">Insert</button>
-</div>
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-info" (click)="insert(form_element)">Insert</button>
+    </div>
+    
+</form>
+    

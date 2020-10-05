@@ -22,7 +22,7 @@ export class NewEmployeeComponent{
   //   "checked": true
   // }
 
-  insert(a:HTMLInputElement,b:HTMLInputElement,c:HTMLInputElement){
+  insert(f){
     // console.log(this.newData);
     // this.newData.serialNumber=(this.parentData.length+1).toString();
     // this.newData.Status="Success";
@@ -32,14 +32,18 @@ export class NewEmployeeComponent{
    
 
     this.parentData.push({
-      projectName:a.value,
-      teamMembers:b.value,
-      projectProgress:c.value,
+      projectName:f.value.projectName,
+      teamMembers:f.value.teamMember,
+      projectProgress:f.value.projectProgress,
       serialNumber:(this.parentData.length+1).toString(),
-      Status:"Success",
-      checked:true
+      Status:f.value.projectProgress>=50?"On Track":"Off Track",
+      checked:f.value.projectProgress>=50? false:true
     })
     this.sendNewData.emit(this.parentData);
+  }
+
+  test(f){
+    console.log(f.value.projectName)
   }
 
 

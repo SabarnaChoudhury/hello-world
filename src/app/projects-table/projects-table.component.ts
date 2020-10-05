@@ -14,7 +14,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 4,
       "projectProgress": 67,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     },
     {
@@ -22,7 +22,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 2,
       "projectProgress": 47,
-      "Status": "Success",
+      "Status": "Off Track",
       "checked":true
     },
     {
@@ -30,7 +30,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 3,
       "projectProgress": 77,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     },
     {
@@ -38,7 +38,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 4,
       "projectProgress": 60,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     },
     {
@@ -46,7 +46,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 3,
       "projectProgress": 12,
-      "Status": "Success",
+      "Status": "Off Track",
       "checked":true
     },
     {
@@ -54,7 +54,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 4,
       "projectProgress": 35,
-      "Status": "Success",
+      "Status": "Off Track",
       "checked":true
     },
     {
@@ -62,7 +62,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 2,
       "projectProgress": 97,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     },
     {
@@ -70,7 +70,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 3,
       "projectProgress": 77,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     },
     {
@@ -78,7 +78,7 @@ export class ProjectsTableComponent implements OnInit {
       "projectName": "Pesamakini Backend UI",
       "teamMembers": 4,
       "projectProgress": 77,
-      "Status": "Success",
+      "Status": "On Track",
       "checked":false
     }
   ];
@@ -103,5 +103,10 @@ export class ProjectsTableComponent implements OnInit {
   
     console.log(data);
   }
+
+  generator(num){
+    return new Array(num);
+  }
+
   
 }
