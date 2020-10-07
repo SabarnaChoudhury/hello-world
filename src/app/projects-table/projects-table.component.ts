@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,81 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects-table.component.css']
 })
 export class ProjectsTableComponent implements OnInit {
-  tableData=[
-    {
-      "serialNumber": "1",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 4,
-      "projectProgress": 67,
-      "Status": "On Track",
-      "checked":false
-    },
-    {
-      "serialNumber": "2",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 2,
-      "projectProgress": 47,
-      "Status": "Off Track",
-      "checked":true
-    },
-    {
-      "serialNumber": "3",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 3,
-      "projectProgress": 77,
-      "Status": "On Track",
-      "checked":false
-    },
-    {
-      "serialNumber": "4",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 4,
-      "projectProgress": 60,
-      "Status": "On Track",
-      "checked":false
-    },
-    {
-      "serialNumber": "5",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 3,
-      "projectProgress": 12,
-      "Status": "Off Track",
-      "checked":true
-    },
-    {
-      "serialNumber": "6",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 4,
-      "projectProgress": 35,
-      "Status": "Off Track",
-      "checked":true
-    },
-    {
-      "serialNumber": "7",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 2,
-      "projectProgress": 97,
-      "Status": "On Track",
-      "checked":false
-    },
-    {
-      "serialNumber": "8",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 3,
-      "projectProgress": 77,
-      "Status": "On Track",
-      "checked":false
-    },
-    {
-      "serialNumber": "9",
-      "projectName": "Pesamakini Backend UI",
-      "teamMembers": 4,
-      "projectProgress": 77,
-      "Status": "On Track",
-      "checked":false
-    }
-  ];
-  constructor() { }
+  tableData:any=[];
+
+  constructor(http:HttpClient) { http
+    .get("https://jsonblob.com/api/e9d3d0f4-0854-11eb-a3c1-f38ea6f1632a")
+    .subscribe(data=>{
+      this.tableData=data;
+    })
+
+
+}
   ngOnInit(){
   }
 

@@ -15,6 +15,9 @@ import { ProjectsTableComponent } from './projects-table/projects-table.componen
 import { TableHeaderComponent } from './projects-table/table-header/table-header.component';
 import { FormsModule } from '@angular/forms';
 import { NewEmployeeComponent } from './projects-table/new-employee/new-employee.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,13 +32,16 @@ import { NewEmployeeComponent } from './projects-table/new-employee/new-employee
     ProjectsNavbarComponent,
     TableHeaderComponent,
     EmployeeDetailsComponent,
-    NewEmployeeComponent
+    NewEmployeeComponent,
+    Sibling1Component,
+    Sibling2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CalculatorModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
